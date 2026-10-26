@@ -1,7 +1,7 @@
 body{
     background-color: #ca9c68;
     margin: 0;
-    height: 1500px;
+    min-height: 100dvh;
     color: #14191f;
 }
 header{
@@ -54,6 +54,9 @@ footer{
     background-color: #916d4b;
     margin: 0;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80px;
 }
 @media (max-width: 720px){
     .group{
