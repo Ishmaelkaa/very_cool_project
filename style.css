@@ -12,7 +12,7 @@ header{
 }
 article{
     display: flex;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 header h2{
     margin-top: 25px;
@@ -46,8 +46,18 @@ main{
     margin-top: 20px;
     font-size: x-large;
 }
+.bottom{
+    margin-left: 20px;
+    margin-right: 20px;
+}
 footer{
     background-color: #916d4b;
     margin: 0;
     display: flex;
+}
+@media (max-width: 720px){
+    .group{
+        margin-top: 60px;
+        grid-template-columns: minmax(0, 330px);
+    }
 }
