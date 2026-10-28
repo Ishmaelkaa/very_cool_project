@@ -26,12 +26,16 @@ main{
     display: flex;
     justify-content: center;
 }
+h4{
+    padding-top: 10px;
+}
 .group{
     margin-top: 200px;
     display: grid;
     grid-template-columns: repeat(2, 330px);
     flex-direction:column;
     gap: 16px;
+    margin-bottom: 180px;
 }
 .box{
     width: 330px;
@@ -53,10 +57,14 @@ main{
 footer{
     background-color: #916d4b;
     margin: 0;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
     align-items: center;
     min-height: 80px;
+}
+footer a{
+    color: #9b8e82;
+    cursor: help;
+    text-decoration: dashed;
 }
 @media (max-width: 720px){
     .group{
