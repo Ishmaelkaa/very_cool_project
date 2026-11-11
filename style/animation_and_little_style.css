@@ -1,5 +1,5 @@
 body{
-    background-color: #ca9c68;
+    background-color: #d6c4f3;
     margin: 0;
     min-height: 100dvh;
     color: #14191f;
@@ -7,7 +7,7 @@ body{
     display: flex;
 }
 header{
-    background-color: #916d4b;
+    background-color: #c1ebfc71;
     margin: 0;
     display: flex;
     justify-content: space-around;
@@ -21,7 +21,7 @@ header h2{
 }
 .header_link{
     cursor: pointer;
-    color: #ca9c68;
+    color: blue;
     text-decoration: overline;
 }
 a{
@@ -35,25 +35,33 @@ main{
     align-items: end;
     flex: 1;
 }
+/* ГЛАВНАЯ ЧАСТЬ, С КОТОРОЙ И НУЖНО РАБОТАТЬ */
 .machine_housing{
     display: flex;
-    background-color: #14191f;
-    height: 30px;
-    width: 100px;
+    
     align-items: flex-end;
-    position: relative;
     justify-content: space-between;
+    position: relative;
+
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 15%;
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
+    
+    height: 30px;
+    width: 100px;
     bottom: 15px;
-    z-index: auto;
+    z-index: 10 !important;
+
+    background-color: #3d6ca5;
+
+    animation-name: riding_car;
+    animation-duration: 10s;
 }
+/* ГЛАВНАЯ ЧАСТЬ, С КОТОРОЙ И НУЖНО РАБОТАТЬ */
 .header_car{
-    background-color: #14191f;
+    background-color: #3d6ca5;
     display: flex;
-    background-color: #14191f;
     height: 30px;
     width: 70px;
     position: absolute;
@@ -62,33 +70,100 @@ main{
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
 }
-.wheel_1{
-    height: 35px;
-    width: 35px;
-    border-radius: 100%;
-    background-color: bisque;
+.perekritie{
+    background-color: #3d6ca5;
+    display: flex;
+    height: 15px;
+    width: 100px;
     position: absolute;
+    bottom: 1px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+.wheel_1{
+    height: 30px;
+    width: 30px;
+
+    border-radius: 100%;
+
+    background-color: #161618;
+
+    position: absolute;
+
     bottom: -15px;
     left: 3px;
     z-index: -1;
     
 }
 .wheel_2{
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     border-radius: 100%;
-    background-color: bisque;
+    background-color: #161618;
     position: absolute;
     bottom: -15px;
     right: 5px;
     z-index: -1;
 }
+/*Колеса, которые будут видны спереди
+                |  |  |  |  |
+                V  V  V  V  V              */
+.wheel_3{
+    height: 30px;
+    width: 30px;
+
+    border-radius: 100%;
+
+    background-color: #262628;
+
+    position: absolute;
+
+    bottom: -17px;
+    left: 7px;
+    z-index: 2;
+}
+.wheel_4{
+    height: 30px;
+    width: 30px;
+
+    border-radius: 100%;
+
+    background-color: #262628;
+
+    position: absolute;
+
+    bottom: -17px;
+    right: 2px;
+    z-index: 2;
+}
+.line_for_asphalt{
+    background-color: yellow;
+
+    height: 2px;
+    width: 40px;
+    bottom: 5px;
+
+    margin-left: 5px;
+    margin-top: 5px;
+    
+}
 footer{
+    display: flex;
     padding-bottom: 120px;
-    background-color: #916d4b;
+    background-color: #3f3f3e;
     margin: 0;
-    text-align: center;
-    align-items: center;
+    justify-content: space-between;
+}
+@keyframes riding_car{
+    0%{
+        
+    }
+
+    100%{
+        transform: translate(900px);
+    }
 }
 @media (max-width: 720px){
     .group{
