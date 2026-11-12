@@ -56,7 +56,9 @@ main{
     background-color: #3d6ca5;
 
     animation-name: riding_car;
-    animation-duration: 10s;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 /* ГЛАВНАЯ ЧАСТЬ, С КОТОРОЙ И НУЖНО РАБОТАТЬ */
 .header_car{
@@ -160,9 +162,11 @@ footer{
     0%{
         
     }
-
-    100%{
+    50%{
         transform: translate(900px);
+    }
+    100%{
+        transform: translate(3px);
     }
 }
 @media (max-width: 720px){
